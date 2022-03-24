@@ -34,6 +34,7 @@
 			display: flex;
 			position: relative;
 			width: 100%;
+			
 		}
 
 		.evt-videoContainer video#evt-video {
@@ -42,19 +43,28 @@
 
 		.evt-letrero {
 			width: 9.6%;
-			top: 11.3%;
-			width: 9.8%;
-			height: 30.8%;
+			top: 37.9%;
+			height: 38.2%;
 			display: flex;
+			clip-path: polygon();
+	
 		}
 
 		.evt-letrero.evt-izq {
-			left: 22.3%;
+			left: 36%;
 			width: 10.4%;
+			clip-path: polygon(0 100%, 0 1%, 6% 0%, 100% 26.8%, 100% 100%);
+			background-color:rgba(0, 0, 0, .02);
 		}
 
 		.evt-letrero.evt-der {
-			right: 22.4%;
+			top: 63%;
+			right: 9.4%;
+			height: 31.5%;
+			width: 11.4%;
+			background-color: transparent;
+			clip-path: polygon(0% 100%, 1.5% 3%, 100% 0%, 100% 100%);
+			background-color:rgba(0, 0, 0, .02);
 		}
 
 		#evt-video {
@@ -121,26 +131,33 @@
 		}
 
 		.evt-central-pos {
-			width: 9.2%;
-			height: 13.4%;
-			top: 66%;
-			left: 52.8%;
+			width: 10%;
+			height: 14%;
+			top: 65%;
+			left: 53%;
+			clip-path: polygon(0% 100%,  0 7%, 90% 0%, 100% 6%, 100% 100%) ;
+			background-color:rgba(0, 0, 0, .02);
+			
 		}
 
 		.evt-left-pos {
-			width: 22.2%;
-			height: 26.4%;
-			top: 54%;
-			left: 12.4%;
-			transform: rotate(12deg)
+			width: 21.3%;
+			height: 30.5%;
+			top: 46.8%;
+			left: 13.4%;
+			clip-path: polygon(0% 100%,  0 10%, 14.4% 4%, 100% 34%, 100% 100%) ;
+			background-color:rgba(0, 0, 0, .02);
+			
+			
 		}
 
 		.evt-right-pos {
-			width: 22.1%;
-			height: 16.5%;
-			top: 11.8%;
-			right: 14.3%;
-			transform: rotate(-10deg)
+			width: 23.7%;
+			height: 31.4%;
+			top: 1.5%;
+			right: 13.3%;
+			clip-path: polygon(0% 100%, 0% 47% , 95% 0%, 100% 5.6%, 100% 65%);
+			background-color:rgba(0, 0, 0, .02);
 		}
 
 		.evt-banner-img {
@@ -183,10 +200,11 @@
 		}
 
 		.evt-icon {
-			width: 20%;
-			height: 6%;
-			left: 20.5%;
-			bottom: 8.2%;
+			width: 38.2%;
+			height: 21.7%;
+			left: 1.2%;
+			bottom: 0%;
+			clip-path: polygon(0% 100%, 0% 0%, 100% 7%, 100% 100%);
 		}
 
 		.evt-audiobtn:nth-child(1) {
@@ -392,15 +410,15 @@
 			}
 
 			#evt-banner_right {
-				display: none;
+				display: block;
 			}
 
 			#evt-link_right {
-				display: none;
+				display: block;
 			}
 
 			#evt-banner_left {
-				display: none;
+				display: block;
 			}
 
 
@@ -410,22 +428,50 @@
 
 
 			.evt-banner_left {
-				left: 22.3%;
+				left: 10%;
 				width: 10.4%;
 			}
 
+			.evt-letrero.evt-izq {
+			left: 0%;
+			width: 22.4%;
+			height: 23.4%;
+			top: 39%;
+			clip-path: polygon(0 86%, 0% 0%, 100% 30%, 95% 100%);
+		
+			}
+
+			.evt-letrero.evt-der {
+			top: 69%;
+			right: 15.4%;
+			height: 14.5%;
+			width: 14.4%;
+			clip-path: polygon(0% 100%, 0% 0%, 100% 0%, 100% 100%);
+		
+			}
+		
 			.evt-central-pos {
-				width: 40.8%;
-				height: 16.6%;
-				top: 53.9%;
-				left: 51%;
+				width: 25.8%;
+				height: 12.6%;
+				top: 60%;
+				left: 32.4%;
+				clip-path: polygon(0 100%, 0% 0%, 100% 2%, 100% 100%);
 			}
 
 			.evt-left-pos {
-				width: 33%;
-				height: 13.4%;
-				top: 54.8%;
-				left: .4%;
+				width: 20%;
+				height: 11.4%;
+				top: 63%;
+				left: 1.2%;
+				clip-path: polygon(0 100%, 2% 0%, 100% 20%, 100% 87%);
+			}
+
+			.evt-right-pos {
+			width: 27%;
+			height: 12.4%;
+			top: 23.3%;
+			right: 33.3%;
+			clip-path: polygon(0% 100%, 0% 0% , 100% 3%, 100% 100%);
 			}
 
 			.evt-video-central {
@@ -450,17 +496,10 @@
 			}
 
 			.evt-icon {
-				width: 40%;
+				width: 42%;
 				height: 7%;
-				left: 3%;
-				bottom: 7.5%;
-			}
-
-			.evt-letrero.izq {
-				left: 4.4%;
-				width: 25%;
-				height: 31%;
-				top: 11.2%;
+				left: 0%;
+				bottom: 3%;
 			}
 		}
 
@@ -488,23 +527,57 @@
 				width: 100%;
 			}
 
-			#evt-banner_left {
+			#evt-banner_right {
 				display: none;
+			}
+
+			#evt-link_right {
+				display: block;
+			}
+
+			#evt-banner_left {
+				display: block;
 			}
 
 			#evt-link_left {
-				display: none;
+				display: block;
 			}
 
 			.evt-central-pos {
-				width: 65.2%;
-				height: 16.4%;
-				top: 54%;
-				left: 16%;
+				width: 29.5%;
+				height: 10.4%;
+				top: 63.1%;
+				left: 45%;
+			}
+
+			.evt-right-pos {
+			width: 45%;
+			height: 15%;
+			top: 22.5%;
+			right: 5.6%;
+			clip-path: polygon(0% 100%, 0% 0% , 100% 3%, 100% 100%);
+			}
+
+			.evt-left-pos {
+				width: 23.5%;
+				height: 11.4%;
+				top: 65%;
+				left: 2%;
+				clip-path: polygon(0 100%, 0% 0%, 100% 5%, 100% 85%);
+				background-color: rgba(0, 0, 0, .02);
+			}
+
+			.evt-letrero.evt-izq {
+			left: 0%;
+			width: 30.4%;
+			height: 20.9%;
+			top: 43.5%;
+			clip-path: polygon(0 90%, 0% 0%, 100% 25%, 100% 100%);
+		
 			}
 
 			.evt-video-central {
-				width: 66.5%;
+				width: 10.5%;
 				height: 17.7%;
 				top: 27.2%;
 				left: 16.3%;
@@ -525,10 +598,10 @@
 			}
 
 			.evt-icon {
-				left: 0.5%;
-				bottom: 9.6%;
-				width: 50%;
-				height: 5%;
+				left: 0%;
+				bottom: 3%;
+				width: 46%;
+				height: 8%;
 			}
 		}
 	</style>
@@ -557,12 +630,12 @@
 
 			<!-- BANNER DE LA IZQUIERDA -->
 			<!-- ESTA IMÁGEN SE COMPORTA SEGÚN DIMENCIONES DE LA PANTALLA Y EL TIPO DE DISPOSITIVO-->
-			<a href="https://virtual-stage.eventtia.com/en/aml2022/stage/166258?module=Attendees"id="evt-banner_left" title="Banner uno" class="evt-abs evt-letrero evt-izq" target="_blank">
+			<a href="https://virtual-stage.eventtia.com/en/aml2022/stage/166258?module=Attendees"id="evt-banner_left" title="Banner uno" class="evt-abs evt-letrero evt-izq evt-links" target="_blank">
 				<!--<img src="img/banner_left.png" alt="Banner Left" class="evt-banner-img">-->
 			</a>
 			<!-- BANNER DE LA DERECHA -->
 			<!-- ESTA IMÁGEN SE COMPORTA SEGÚN DIMENCIONES DE LA PANTALLA Y EL TIPO DE DISPOSITIVO -->
-			<a href="https://virtual-stage.eventtia.com/en/aml2022/stage/166258?module=Speakers"id="evt-banner_right" title="Banner dos" class="evt-abs evt-letrero evt-der" target="_blank">
+			<a href="https://www.eventtia.com/"id="evt-banner_right" title="Banner dos" class="evt-abs evt-letrero evt-der evt-links" target="_blank">
 				<!-- <img src="img/banner_right.png" alt="Banner Right" class="evt-banner-img">-->
 			</a>
 
@@ -582,21 +655,21 @@
 
 			<!-- CHIKMENEA CENTRAL-->
 			<a id="evt-link_center" title="Visitar VIRTUAL STAGE"
-				href = "https://virtual-stage.eventtia.com/en/aml2022/stage/166258"target="_blank"
+				href = "https://virtual-stage.eventtia.com/en/keynote_eventtia_2022/stage/173874?module=Workshops"target="_blank"
 				class="evt-abs evt-links evt-central-pos">
-				<span>AUDITORIUM</span>
+				<span></span>
 			</a>
 			<!-- CHIMENEA IZQUIERDA -->
 			<a id="evt-link_left" title="Visitar SPEAKERS"
-				href = "https://virtual-stage.eventtia.com/en/aml2022/stage/166258?module=Workshops" target="_blank"
+				href = "https://virtual-stage.eventtia.com/en/keynote_eventtia_2022/stage/173874" target="_blank"
 				class="evt-abs evt-links evt-left-pos">
-				<span>AGENDA</span>
+				<span></span>
 			</a>
 			<!-- CHIMENEA DERECHA -->
 			<a id="evt-link_right" title="Visitar SPONSORS" 
-				href = "https://virtual-stage.eventtia.com/en/aml2022/stage/166258?module=Sponsors" target="_blank"
+				href = "https://virtual-stage.eventtia.com/en/keynote_eventtia_2022/stage/173874?module=Surveys&surveyId=8763" target="_blank"
 				class="evt-abs evt-links evt-right-pos">
-				<span>EXPO AREA</span>
+				<span></span>
 		</a>
 
 			<!-- PROYECTOR DEL LA PARTE SUPERIOR-->
@@ -622,7 +695,7 @@
 					</path>-->
 				</svg>
 			</div>
-			<a class="evt-abs evt-icon" href="https://virtual-stage.eventtia.com/en/aml2022/home?module=Tutorials%20Videos" target="_blank" ></a>
+			<a class="evt-abs evt-icon evt-links" href="https://virtual-stage.eventtia.com/en/keynote_eventtia_2022/stage/173874?module=Messages&activeChannel=custom:keynote_eventtia_2022:f60d49ffC6d944aaA943Ba24e5afee76" target="_blank" ></a>
 			<!--  <audio id="evt-bg_audio" autoplay="" loop>
 				<source src="./audio/background_sound.mp3" type="audio/mpeg">
 			</audio>
